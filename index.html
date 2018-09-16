@@ -36,12 +36,14 @@
 </head>
 <body>
 <div class="container">
-    <p>These Bookmarklets will allow you to easily switch between <a href="https://steemit.com/">Steemit.com</a> and <a href="https://steempeak.com">SteemPeak.com</a>.</p>
+    <p>These Bookmarklets will allow you to easily switch to <a href="https://steemit.com/">Steemit.com</a> and <a href="https://steempeak.com">SteemPeak.com</a>.</p>
+    <p>Steemit.com, Steemd.com, Steepshot, Busy.org -> SteemPeak.com</p>
+    <p>SteemPeak.com, Steemd.com, Steepshot, Busy.org -> Steemit.com</p>
     <p><strong>NOTE:</strong> These will not work for all pages as there are some pages that are not implemented on each site. For example: Steemit does not have a Dashboard page. Steempeak does not have a market page (yet).</p>
     <hr/>
     <p>To add these bookmarklets to your web browser, simply drag and drop them onto you Bookmark Bar.</p>
-    <a id="steempeak" class="button" href="javascript:(function(){if(window.location.host==='steemit.com'){window.location.href='https://steempeak.com'+window.location.pathname+window.location.search}}());">View on SteemPeak</a>
-    <a id="steemit" class="button" href="javascript:(function(){if(window.location.host==='steempeak.com'){window.location.href='https://steemit.com'+window.location.pathname+window.location.search}}());">View on Steemit</a>
+    <a id="steempeak" class="button" href="javascript:(function(){if(window.location.host == 'steemit.com' || window.location.host=='steemd.com' || window.location.host=='alpha.steepshot.io' || window.location.host=='busy.org'){window.location.href='https://steempeak.com' + window.location.pathname + window.location.search}}());">View on SteemPeak</a>
+    <a id="steemit" class="button" href="javascript:(function(){if(window.location.host == 'steempeak.com' || window.location.host == 'steemd.com' || window.location.host == 'busy.org'|| window.location.host == 'alpha.steepshot.io'){window.location.href='https://steemit.com' + window.location.pathname + window.location.search}}());">View on Steemit</a>
 </div>
 <script>
   document.getElementById('steempeak').addEventListener('click', function(e){
