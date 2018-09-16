@@ -42,12 +42,16 @@
     <p>To add these bookmarklets to your web browser, simply drag and drop them onto you Bookmark Bar.</p>
     <a id="steempeak" class="button" href="javascript:(function(){if(window.location.host==='steemit.com'){window.location.href='https://steempeak.com'+window.location.pathname+window.location.search}}());">View on SteemPeak</a>
     <a id="steemit" class="button" href="javascript:(function(){if(window.location.host==='steempeak.com'){window.location.href='https://steemit.com'+window.location.pathname+window.location.search}}());">View on Steemit</a>
+    <a id="steemit-steempeak" class="button" href="javascript:(function(){if(window.location.host==='steempeak.com'){window.location.href='https://steemit.com'+window.location.pathname+window.location.search}else if (window.location.host==='steemit.com'){window.location.href='https://steempeak.com'+window.location.pathname+window.location.search}}());">Steemit/Steempeak</a>
 </div>
 <script>
   document.getElementById('steempeak').addEventListener('click', function(e){
     e.preventDefault();
   });
   document.getElementById('steemit').addEventListener('click', function(e){
+    e.preventDefault();
+  });
+  document.getElementById('steemit-steempeak').addEventListener('click', function(e){
     e.preventDefault();
   });
 </script>
